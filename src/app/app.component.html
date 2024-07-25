@@ -1,0 +1,52 @@
+<!-- <div class="  flex flex-col gap-5 justify-center items-center pt-4">
+  <mat-form-field>
+    <mat-label>Number 1</mat-label>
+    <input type="number" matInput placeholder="Ex. pat@example.com" [(ngModel)]="num1">
+    <mat-hint>Errors appear instantly!</mat-hint>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Number 2</mat-label>
+    <input type="number" matInput placeholder="Ex. pat@example.com" [(ngModel)]="num2">
+    <mat-hint>Errors appear instantly!</mat-hint>
+  </mat-form-field>
+  <buttonmat-fab (click)="sum()">result</buttonmat-fab>
+  <p>{{result}}</p>
+</div> -->
+
+<div>
+  <div class="flex justify-center">
+    <mat-form-field class="">
+ 
+      <input matInput type="number" [(ngModel)]="number">
+    </mat-form-field>
+
+  </div>
+  <div class="flex justify-center gap-5 pt-5">
+    <button mat-fab class="" (click)='numberClick("1")'>1</button>
+    <button mat-fab class="" (click)='numberClick("2")'>2</button>
+    <button mat-fab class="" (click)='numberClick("3")'>3</button>
+    <button mat-fab (click)="plus()">+</button>
+
+
+  </div>
+  <div class="flex justify-center gap-5 pt-5">
+    <button mat-fab class="" (click)='numberClick("4")'>4</button>
+    <button mat-fab class="" (click)='numberClick("5")'>5</button>
+    <button mat-fab class="" (click)='numberClick("6")'>6</button>
+    <button mat-fab>-</button>
+  </div>
+  <div class="flex justify-center gap-5 pt-5">
+    <button mat-fab class="" (click)='numberClick("7")'>7</button>
+    <button mat-fab class="" (click)='numberClick("8")' >8</button>
+    <button mat-fab class=""(click)='numberClick("9")'>9</button>
+    <button mat-fab>*</button>
+  </div>
+  <div class="flex justify-center gap-5 pt-5">
+    <button mat-fab class="" (click)='numberClick("7")'>=</button>
+    <button mat-fab class="" (click)='numberClick("8")' >0</button>
+    <button mat-fab class=""(click)='numberClick("9")'>/</button>
+    <button mat-fab>*</button>
+  </div>
+ <h1>result</h1>
+
+</div>
