@@ -1,0 +1,52 @@
+<div>
+    <div class="flex justify-center pt-10">
+      <div>
+        {{old}}
+        @if (action !== undefined) {
+        {{action}}
+        }
+      </div>
+      <mat-form-field class="pt-8">
+  
+        <input matInput type="text" [(ngModel)]="current" readonly="true">
+      </mat-form-field>
+  
+    </div>
+    <div class="flex justify-center gap-5 pt-5">
+      <button mat-fab class="" (click)='numberClick("1")'>1</button>
+      <button mat-fab class="" (click)='numberClick("2")'>2</button>
+      <button mat-fab class="" (click)='numberClick("3")'>3</button>
+      <button mat-fab (click)="oper(Operation.add)">+</button>
+  
+  
+    </div>
+    <div class="flex justify-center gap-5 pt-5">
+      <button mat-fab class="" (click)='numberClick("4")'>4</button>
+      <button mat-fab class="" (click)='numberClick("5")'>5</button>
+      <button mat-fab class="" (click)='numberClick("6")'>6</button>
+      <button mat-fab (click)="oper(Operation.minus)">-</button>
+    </div>
+    <div class="flex justify-center gap-5 pt-5">
+      <button mat-fab class="" (click)='numberClick("7")'>7</button>
+      <button mat-fab class="" (click)='numberClick("8")'>8</button>
+      <button mat-fab class="" (click)='numberClick("9")'>9</button>
+      <button mat-fab (click)='oper(Operation.multiply)'>*</button>
+    </div>
+    <div class="flex justify-center gap-5 pt-5">
+      <button mat-fab class="" (click)='oper(Operation.calc)'>=</button>
+      <button mat-fab class="" (click)='numberClick("0")'>0</button>
+      <button mat-fab class="" (click)='numberClick(".")'>.</button>
+      <button mat-fab (click)='oper(Operation.divide)'>/</button>
+    </div>
+    <div class="flex justify-center gap-5 pt-5">
+      <button mat-fab (click)="backSpase()">-></button>
+      <button mat-fab (click)="clear()">X</button>
+  
+    </div>
+  
+  </div>
+  
+  <div class="bg-red-300 text-3xl flex justify-center">
+    <p>
+      {{current}}</p>
+  </div>
